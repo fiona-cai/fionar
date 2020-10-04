@@ -1,0 +1,359 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+* {
+  box-sizing: border-box;
+}
+
+.center {
+  margin: auto;
+  align-content: center;
+  align-items: center;
+  align-self: center;
+  text-align: center;
+  -webkit-box-align: center;
+}
+
+/* Style the body */
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  margin: 0;
+}
+
+@font-face {
+  font-family: cursiva;
+  src: url(Myfontwide-Regular.ttf);
+}
+
+.font {
+  font-family: cursiva, Arial, Helvetica, sans-serif;
+}
+/* Header/logo Title */
+
+.header {
+  /* The image used */
+  background-image: url("images/veryblack.jpg");
+
+  /* Full height */
+  height: 100%; 
+
+  /* Create the parallax scrolling effect */
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  backdrop-filter: brightness(.1);
+  background-size: cover;
+  filter: contrast(103%);
+  color: #ffffff;
+  padding: 15%;
+}
+
+.parallax {
+  /* The image used */
+  background-image: url("images/IMG_6941.PNG");
+
+  /* Create the parallax scrolling effect */
+  background-attachment: fixed;
+  filter: brightness(10%);
+  background-position: center;
+  background-repeat: no-repeat;
+  color: #ffffff;
+  width: 100%;
+  padding: 5%;
+}
+
+.logo {
+  padding: 50px;
+  background: url(https://lh3.googleusercontent.com/xK-HO7YXZTmMFynbHrShJ6RbhThGHfqCvtA409hYKLN-pvwBAmHsXWbfKCtZs0be1tWyZg=s170);
+  background-attachment: fixed;
+  background-size: cover;
+  background-repeat: no-repeat;
+  position: relative;
+}
+/* Increase the font size of the heading */
+.header h1 {
+  text-align: center;
+  filter: brightness(100%);
+  font-family: "reem kufi", "helvetica", cursive, sans-serif;
+}
+
+.header h2 {
+  text-align: center;
+  font-family: cursiva, "reem kufi", "helvetica", cursive, sans-serif;
+}
+/* Sticky navbar - toggles between relative and fixed, depending on the scroll position. It is positioned relative until a given offset position is met in the viewport - then it "sticks" in place (like position:fixed). The sticky value is not supported in IE or Edge 15 and earlier versions. However, for these versions the navbar will inherit default position */
+.navbar {
+  text-align: center;
+  overflow: auto;
+  background-color: #000000bb;
+  color: #aaa;
+  position: sticky;
+  border-radius: 25px;
+  font-family: "reem kufi", "helvetica", cursive, sans-serif;
+  height: 10%;
+  z-index: 100;
+}
+
+/* Style the navigation bar links */
+.navbar a {
+  text-align: center;
+  display: inline-block;
+  color: white;
+  text-align: center;
+  align-items: center;
+  align-content: center;
+  text-decoration: none;
+}
+
+/* Right-aligned link */
+.navbar a.right {
+  line-height: 50px;
+  text-align: center;
+  float: right;
+  padding: 5px 75px;
+  border-radius: 25px;
+  height: 100%;
+}
+
+.navbar a.left {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  line-height: 50px;
+  text-align: center;
+  float: left;
+  padding: 0px 75px;
+  border-radius: 25px;
+  height: 100%;
+}
+
+/* Change color on hover */
+.navbar a:hover {
+  background-color: #00000083;
+  color: #dbdbdb;
+}
+
+/* Active/current link */
+.navbar a.active {
+  background-color: #00000000;
+  color: white;
+}
+
+.sticky {
+  position: fixed;
+  top: 0;
+  width: 100%;
+}
+
+/* Column container */
+.row {  
+  display: -ms-flexbox; /* IE10 */
+  display: flex;
+  -ms-flex-wrap: wrap; /* IE10 */
+  flex-wrap: wrap;
+}
+
+/* Create two unequal columns that sits next to each other */
+/* Sidebar/left column */
+.side {
+  -ms-flex: 30%; /* IE10 */
+  flex: 30%;
+  background-color: #131313;
+  color: rgb(150, 150, 150);
+  padding: 20px;
+}
+
+/* Main column */
+.main {   
+  -ms-flex: 70%; /* IE10 */
+  flex: 70%;
+  background-color: #0c0c0c;
+  color: rgb(150, 150, 150);
+  padding: 20px;
+}
+
+/* Fake image, just for this example */
+.fakeimg {
+  background-color: #aaa;
+  width: 100%;
+  padding: 20px;
+}
+
+/* Footer */
+.footer {
+  overflow: auto;
+  text-align: center;
+  background: #0c0c0c;
+  min-height: auto;
+  width: 100%;
+  max-height: 100px;
+  position: absolute;
+  padding-top: 5px;
+}
+
+.footer a {
+  padding-left: 10px;
+}
+.container {
+  position: absolute;
+  margin: 20px;
+  width: auto;
+}
+
+.bg-img {
+  /* The image used */
+  background-image: url("https://data.whicdn.com/images/307096464/original.gif");
+
+  min-height: 380px;
+
+  /* Center and scale the image nicely */
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  
+  /* Needed to position the navbar */
+  position: relative;
+}
+
+.invert {
+  filter: invert(100%);
+  -webkit-filter: invert(100%);
+}
+
+.glow {
+  font-size: 60px;
+  color: #ffffff;
+  text-align: center;
+  -webkit-animation: glow 2s ease-in-out infinite alternate;
+  -moz-animation: glow 2s ease-in-out infinite alternate;
+  animation: glow 2s ease-in-out infinite alternate;
+}
+
+.boxie {
+  height: fit-content;
+  background-color: #0c0c0c;
+  width: 100%;
+  padding-bottom: 5%;
+  position: relative;
+  text-align: center;
+}
+
+.boxie a {
+  color: white;
+  font-size: larger;
+  width: 50%;
+}
+
+.slide {
+  animation-duration: 5s;
+  animation-name: bounceIn;
+}
+
+
+@keyframes bounceIn {
+  0% {
+    transform: scale(0.1);
+    opacity: 0;
+  }
+  50% {
+    transform: scale(1.);
+    opacity: 0.5;
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
+/* Responsive layout - when the screen is less than 700px wide, make the two columns stack on top of each other instead of next to each other */
+@media screen and (max-width: 700px) {
+  .row {   
+    flex-direction: column;
+  }
+}
+
+/* Responsive layout - when the screen is less than 400px wide, make the navigation links stack on top of each other instead of next to each other */
+@media screen and (max-width: 400px) {
+  .navbar a {
+    float: none;
+    width: 100%;
+  }
+}
+
+@-webkit-keyframes glow {
+  from {
+    text-shadow: 0 0 10px #f0e0e0, 0 0 20px #a18a96, 0 0 30px #a39da0;
+  }
+  to {
+    text-shadow: 0 0 20px #fcecec, 0 0 30px #f0dae5, 0 0 40px #f0dae5;
+  }
+}
+
+</style>
+<link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/cookieconsent@3/build/cookieconsent.min.css" />
+</head>
+<body style="background-color:black;">
+
+<div class="navbar sticky">
+    <a href="index.html" class="active left"><img src="images/mylogo.PNG" height="45.045"></a>
+    <a href="about" class="right">About</a>
+    <a href="contact" class="right">Contact</a>
+    <a href="gallery.html" class="right">Gallery</a>
+</div>
+
+<div class="header">
+  <h1 class="glow">Welcome</h1>
+  <h2>to my world</h2>  
+</div>
+
+<div class="boxie font">
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320">
+    <path fill="#000" fill-opacity="1" d="M0,128L80,149.3C160,171,320,213,480,197.3C640,181,800,107,960,85.3C1120,64,1280,96,1360,112L1440,128L1440,0L1360,0C1280,0,1120,0,960,0C800,0,640,0,480,0C320,0,160,0,80,0L0,0Z"></path>
+  </svg>
+  <div class="slide">
+    <a>Hi! my name is Fiona.<br></a>
+    <div class="parallax"></div>
+    <a>I like to call myself an avid learner.<br></a>
+    <div class="parallax"></div>
+    <a>I'm passionate about technology<br></a>
+    <div class="parallax"></div>
+    <a>And I put creativity before anything.<br></a>
+    <div class="parallax"></div>
+    <a>This, is one of my projects.<br></a>
+  </div>
+</div>
+
+<div class="header">
+  <h1 class="glow">Let's go</h1>
+  <h2>to my world</h2>
+</div>
+
+<div class="footer">
+  <a href="mailto:fionacaicontact.com" class="invert"><img src="https://speakliveplay.com/wp-content/uploads/2019/06/email-icon-png-download-icons-logos-emojis-email-icons-2400.png" width="48" height="34.28"></a>
+  <a href="instagram.com/fcaiona" class="invert"><img src="https://image.flaticon.com/icons/png/512/87/87390.png" width="34.28" height="34.28"></a>
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/cookieconsent@3/build/cookieconsent.min.js" data-cfasync="false"></script>
+<script>
+window.cookieconsent.initialise({
+  "palette": {
+    "popup": {
+      "background": "#2e2b2c",
+      "text": "#fff2f8"
+    },
+    "button": {
+      "background": "#ff8cc4",
+      "text": "#78415c"
+    }
+  },
+  "theme": "classic",
+  "content": {
+    "href": "fiona.com"
+  }
+});
+</script>
+
+</body>
+</html>
